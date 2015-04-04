@@ -1,6 +1,9 @@
 
-// ANAKONDA - a programozók fenevada
-// www.anakonda.hu
+/*
+ * ANAKONDA - a programozók fenevada
+ * www.anakonda.hu
+ * (CC) 2009-2015 Szabó Gergő
+ */
 
 $('k').focus();
 fajl('meret', 'a');
@@ -267,8 +270,8 @@ function terminal(e) {
 					case 'rejt': $('k').value = 'url rejtjelezo.hu'; break;
 					case 'szabo': $('k').value = 'url szabogergo.hu'; break;
 					case 'szg': $('k').value = 'url szabogergo.hu'; break;
+					case 'hiper': $('k').value = 'url hiperkapu.hu'; break;
 					case 'indi': $('k').value = 'url indikator.hu'; break;
-					case 'mini': $('k').value = 'url minioldal.hu'; break;
 					case 'mem': $('k').value = 'url memlex.hu'; break;
 					case 'face': $('k').value = 'url facebook.com'; break;
 					case 'fb': $('k').value = 'url facebook.com'; break;
@@ -314,7 +317,7 @@ function elozo(e) {
 
 function about() {
 	el[ei] = 'about';
-	elozo(el[ei] + nl + 'Készítette: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Szabó Gergő' + nl + 'Honlap: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; www.indikator.hu' + nl + 'E-mail cím: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info' + '@' + 'indi' + 'kator' + '.' + 'hu' + nl + 'Honlap mérete: &nbsp; &nbsp; &nbsp; &nbsp;' + m + nl + 'Utolsó módosítás: &nbsp; &nbsp; 2014. január 23.' + nl + 'Fejlesztés kezdete: &nbsp; 2009. november 6.');
+	elozo(el[ei] + nl + 'Készítette: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Szabó Gergő' + nl + 'Honlap: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; www.indikator.hu' + nl + 'E-mail cím: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info' + '@' + 'indi' + 'kator' + '.' + 'hu' + nl + 'Honlap mérete: &nbsp; &nbsp; &nbsp; &nbsp;' + m + nl + 'Utolsó módosítás: &nbsp; &nbsp; 2015. március 4.' + nl + 'Fejlesztés kezdete: &nbsp; 2009. november 6.');
 }
 
 function fajl(p, t) {
@@ -819,8 +822,8 @@ function pages() {
 		'www.tttweb.hu &nbsp; &nbsp; &nbsp; Titkos Tudás Tárháza' + nl +
 		'www.rejtjelezo.hu &nbsp; &nbsp; Rejtjelező' + nl +
 		'www.szabogergo.hu &nbsp; &nbsp; Szabó Gergő fotóoldala' + nl +
-		'www.indikator.hu &nbsp; &nbsp; &nbsp;INDIKÁTOR / kreatív webfejlesztés' + nl +
-		'www.minioldal.hu &nbsp; &nbsp; &nbsp;Legyen ütős weboldala 44e Ft-ért!' + nl +
+		'www.hiperkapu.hu &nbsp; &nbsp; Hiperkapu :: Sci-Fi űrhajók' + nl +
+		'www.indikator.hu &nbsp; &nbsp; &nbsp;INDIKÁTOR | kreatív honlapkészítés' + nl +
 		'www.memlex.hu &nbsp; &nbsp; &nbsp; Memória Lexikon'
 	);
 }
