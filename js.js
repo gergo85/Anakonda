@@ -681,24 +681,6 @@ function help(p) {
 			'parancs: &nbsp; MD5 [tetszőleges szöveg]' + nl +
 			'példa: &nbsp; &nbsp; md5 Programozónak lenni király :)');
 			break;
-		case 'sha1':
-			elozo(s + 'SHA1 - Szövegátalakítás' + nl +
-			'A beírt szöveget alakítja át sha1 algoritmus szerint.' + nl +
-			'parancs: &nbsp; SHA1 [tetszőleges szöveg]' + nl +
-			'példa: &nbsp; &nbsp; sha1 Programozónak lenni király :)');
-			break;
-		case 'sha224':
-			elozo(s + 'SHA224 - Szövegátalakítás' + nl +
-			'A beírt szöveget alakítja át sha224 algoritmus szerint.' + nl +
-			'parancs: &nbsp; SHA224 [tetszőleges szöveg]' + nl +
-			'példa: &nbsp; &nbsp; sha224 Programozónak lenni király :)');
-			break;
-		case 'sha256':
-			elozo(s + 'SHA256 - Szövegátalakítás' + nl +
-			'A beírt szöveget alakítja át sha256 algoritmus szerint.' + nl +
-			'parancs: &nbsp; SHA256 [tetszőleges szöveg]' + nl +
-			'példa: &nbsp; &nbsp; sha256 Programozónak lenni király :)');
-			break;
 		case 'mirrow':
 			elozo(s + 'MIRROW - Tükrözés' + nl +
 			'A beírt szöveget fordítja meg betűnként.' + nl +
@@ -773,7 +755,19 @@ function help(p) {
 			elozo(s + 'SHA1 - Szövegátalakítás' + nl +
 			'A beírt szöveget alakítja át sha1 algoritmus szerint.' + nl +
 			'parancs: &nbsp; SHA1 [tetszőleges szöveg]' + nl +
-			'példa: &nbsp; &nbsp; sha1 Az ég kék.');
+			'példa: &nbsp; &nbsp; sha1 Programozónak lenni király :)');
+			break;
+		case 'sha224':
+			elozo(s + 'SHA224 - Szövegátalakítás' + nl +
+			'A beírt szöveget alakítja át sha224 algoritmus szerint.' + nl +
+			'parancs: &nbsp; SHA224 [tetszőleges szöveg]' + nl +
+			'példa: &nbsp; &nbsp; sha224 Programozónak lenni király :)');
+			break;
+		case 'sha256':
+			elozo(s + 'SHA256 - Szövegátalakítás' + nl +
+			'A beírt szöveget alakítja át sha256 algoritmus szerint.' + nl +
+			'parancs: &nbsp; SHA256 [tetszőleges szöveg]' + nl +
+			'példa: &nbsp; &nbsp; sha256 Programozónak lenni király :)');
 			break;
 		case 'stat':
 			elozo(s + 'STAT - Statisztika' + nl +
