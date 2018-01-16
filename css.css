@@ -34,13 +34,17 @@ body {
 
 #terminal {
 	margin: auto;
-	width: 760px;
+	max-width: 760px;
+	width: 100%;
+	word-wrap: break-word;
 }
 
 #baloldal {
 	float: left;
 	margin-bottom: 40px;
 	max-width: 460px;
+	width: 100%;
+	word-wrap: break-word;
 }
 
 #szoveg {
