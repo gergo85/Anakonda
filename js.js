@@ -2,7 +2,7 @@
 /*
  * ANAKONDA - a programozók fenevada
  * www.anakonda.hu
- * (CC) 2009-2015 Szabó Gergő
+ * (CC) 2009-2018 Szabó Gergő
  */
 
 $('k').focus();
@@ -24,7 +24,7 @@ var ei = 1;
 var ek = 1;
 
 var nl = '<' + 'br' + '/' + '>&nbsp; ';
-var pl = {'about': '', 'auto': ' ', 'cal': ' ', 'color': ' ', 'cls': ' ', 'const': ' ', 'date': ' ', 'display': '', 'domain': ' ', 'exit': '', 'fac': ' ', 'fib': ' ', 'fn': ' ', 'google': ' ', 'gora': ' ', 'help': ' ', 'ip': '', 'label': ' ', 'md5': ' ', 'mirrow': ' ', 'mouse': ' ', 'pages': '', 'php': ' ', 'prim': ' ', 'profile': ' ', 'ref': ' ', 'reload': ' ', 'reset': ' ', 'sha1': ' ', 'stat': '', 'time': ' ', 'url': ' ', 'vol': ''};
+var pl = {'about': '', 'auto': ' ', 'cal': ' ', 'color': ' ', 'cls': ' ', 'const': ' ', 'date': ' ', 'display': '', 'domain': ' ', 'exit': '', 'fac': ' ', 'fib': ' ', 'fn': ' ', 'google': ' ', 'gora': ' ', 'help': ' ', 'ip': '', 'label': ' ', 'md5': ' ', 'sha1': ' ', 'sha224': ' ', 'sha256': ' ', 'mirrow': ' ', 'mouse': ' ', 'pages': '', 'php': ' ', 'prim': ' ', 'profile': ' ', 'ref': ' ', 'reload': ' ', 'reset': ' ', 'stat': '', 'time': ' ', 'url': ' ', 'vol': ''};
 var hiba = 'HIBA: Nincs ilyen paraméter!';
 
 var a = 'off';
@@ -155,6 +155,8 @@ function terminal(e) {
 		if (p.substr(0, 6) == 'label ') label(p);
 		else if (p.substr(0, 4) == 'md5 ') hash_md5(p);
 		else if (p.substr(0, 5) == 'sha1 ') hash_sha1(p);
+		else if (p.substr(0, 7) == 'sha224 ') hash_sha224(p);
+		else if (p.substr(0, 7) == 'sha256 ') hash_sha256(p);
 		else if (p.substr(0, 7) == 'mirrow ') mirrow(p);
 		else if (substr_count(p, ' ') == 1) {
 			p = p.toLowerCase().split(' ');
@@ -272,7 +274,6 @@ function terminal(e) {
 					case 'szg': $('k').value = 'url szabogergo.hu'; break;
 					case 'hiper': $('k').value = 'url hiperkapu.hu'; break;
 					case 'indi': $('k').value = 'url indikator.hu'; break;
-					case 'mem': $('k').value = 'url memlex.hu'; break;
 					case 'face': $('k').value = 'url facebook.com'; break;
 					case 'fb': $('k').value = 'url facebook.com'; break;
 					case 'goog': $('k').value = 'url google.hu'; break;
@@ -317,7 +318,7 @@ function elozo(e) {
 
 function about() {
 	el[ei] = 'about';
-	elozo(el[ei] + nl + 'Készítette: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Szabó Gergő' + nl + 'Honlap: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; www.indikator.hu' + nl + 'E-mail cím: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info' + '@' + 'indi' + 'kator' + '.' + 'hu' + nl + 'Honlap mérete: &nbsp; &nbsp; &nbsp; &nbsp;' + m + nl + 'Utolsó módosítás: &nbsp; &nbsp; 2015. március 4.' + nl + 'Fejlesztés kezdete: &nbsp; 2009. november 6.');
+	elozo(el[ei] + nl + 'Készítette: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Szabó Gergő' + nl + 'Honlap: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; www.indikator.hu' + nl + 'E-mail cím: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info' + '@' + 'indi' + 'kator' + '.' + 'hu' + nl + 'Honlap mérete: &nbsp; &nbsp; &nbsp; &nbsp;' + m + nl + 'Utolsó módosítás: &nbsp; &nbsp; 2018. január 16.' + nl + 'Fejlesztés kezdete: &nbsp; 2009. november 6.');
 }
 
 function fajl(p, t) {
@@ -678,13 +679,31 @@ function help(p) {
 			elozo(s + 'MD5 - Szövegátalakítás' + nl +
 			'A beírt szöveget alakítja át md5 algoritmus szerint.' + nl +
 			'parancs: &nbsp; MD5 [tetszőleges szöveg]' + nl +
-			'példa: &nbsp; &nbsp; md5 Milyen szép az idő!');
+			'példa: &nbsp; &nbsp; md5 Programozónak lenni király :)');
+			break;
+		case 'sha1':
+			elozo(s + 'SHA1 - Szövegátalakítás' + nl +
+			'A beírt szöveget alakítja át sha1 algoritmus szerint.' + nl +
+			'parancs: &nbsp; SHA1 [tetszőleges szöveg]' + nl +
+			'példa: &nbsp; &nbsp; sha1 Programozónak lenni király :)');
+			break;
+		case 'sha224':
+			elozo(s + 'SHA224 - Szövegátalakítás' + nl +
+			'A beírt szöveget alakítja át sha224 algoritmus szerint.' + nl +
+			'parancs: &nbsp; SHA224 [tetszőleges szöveg]' + nl +
+			'példa: &nbsp; &nbsp; sha224 Programozónak lenni király :)');
+			break;
+		case 'sha256':
+			elozo(s + 'SHA256 - Szövegátalakítás' + nl +
+			'A beírt szöveget alakítja át sha256 algoritmus szerint.' + nl +
+			'parancs: &nbsp; SHA256 [tetszőleges szöveg]' + nl +
+			'példa: &nbsp; &nbsp; sha256 Programozónak lenni király :)');
 			break;
 		case 'mirrow':
 			elozo(s + 'MIRROW - Tükrözés' + nl +
 			'A beírt szöveget fordítja meg betűnként.' + nl +
 			'parancs: &nbsp; MIRROW [tetszőleges szöveg]' + nl +
-			'példa: &nbsp; &nbsp; mirrow Visszafele nehezebb olvasni.');
+			'példa: &nbsp; &nbsp; mirrow Visszafele nehezebb elolvasni.');
 			break;
 		case 'mouse':
 			elozo(s + 'MOUSE - Egérkurzor' + nl +
@@ -797,6 +816,21 @@ function label(l) {
 function hash_md5(s) {
 	el[ei] = s;
 	elozo(s + nl + md5(s.substr(4)));
+}
+
+function hash_sha1(s) {
+	el[ei] = s;
+	elozo(s + nl + sha1(s.substr(5)));
+}
+
+function hash_sha224(s) {
+	el[ei] = s;
+	elozo(s + nl + sha224(s.substr(4)));
+}
+
+function hash_sha256(s) {
+	el[ei] = s;
+	elozo(s + nl + sha256(s.substr(4)));
 }
 
 function mirrow(s) {
@@ -942,11 +976,6 @@ function reset(p) {
 		}
 	}
 	else elozo(el[ei] + nl + hiba);
-}
-
-function hash_sha1(s) {
-	el[ei] = s;
-	elozo(s + nl + sha1(s.substr(5)));
 }
 
 function stat() {
