@@ -1,7 +1,10 @@
 <?php
 
-// ANAKONDA - a programozók fenevada
-// www.anakonda.hu
+/*
+ * ANAKONDA - a programozók fenevada
+ * www.anakonda.hu
+ * (CC) 2009-2019 Szabó Gergő
+ */
 
 // IP cím ellenőrzése
 function is_ip($ertek = '') {

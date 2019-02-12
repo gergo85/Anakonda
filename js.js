@@ -1,8 +1,7 @@
-
 /*
  * ANAKONDA - a programozók fenevada
  * www.anakonda.hu
- * (CC) 2009-2018 Szabó Gergő
+ * (CC) 2009-2019 Szabó Gergő
  */
 
 $('k').focus();
@@ -210,7 +209,7 @@ function terminal(e) {
 				case 'display': display(); break;
 				case 'exit': exit(); break;
 				case 'ip': fajl('ip', 'p'); break;
-				case 'like': url('http://www.facebook.com/sharer.php?u=http://www.anakonda.hu&t=Anakonda, a programozók fenevada', ''); break;
+				case 'like': url('https://www.facebook.com/sharer.php?u=https://www.anakonda.hu&t=Anakonda, a programozók fenevada', ''); break;
 				case 'pages': pages(); break;
 				case 'reload': reload(''); break;
 				case 'reset': reset(''); break;
@@ -318,7 +317,7 @@ function elozo(e) {
 
 function about() {
 	el[ei] = 'about';
-	elozo(el[ei] + nl + 'Készítette: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Szabó Gergő' + nl + 'Honlap: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; www.indikator.hu' + nl + 'E-mail cím: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info' + '@' + 'indi' + 'kator' + '.' + 'hu' + nl + 'Honlap mérete: &nbsp; &nbsp; &nbsp; &nbsp;' + m + nl + 'Utolsó módosítás: &nbsp; &nbsp; 2018. január 16.' + nl + 'Fejlesztés kezdete: &nbsp; 2009. november 6.');
+	elozo(el[ei] + nl + 'Készítette: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Szabó Gergő' + nl + 'Honlap: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; www.indikator.hu' + nl + 'E-mail cím: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info' + '@' + 'indi' + 'kator' + '.' + 'hu' + nl + 'Honlap mérete: &nbsp; &nbsp; &nbsp; &nbsp;' + m + nl + 'Utolsó módosítás: &nbsp; &nbsp; 2019. február 12.' + nl + 'Fejlesztés kezdete: &nbsp; 2009. november 6.');
 }
 
 function fajl(p, t) {
@@ -406,10 +405,20 @@ function color(c) {
 function cls(m) {
 	el[ei] = trim('cls ' + m);
 	switch (m) {
-		case '': $('elozo').innerHTML = ''; break;
-		case 'a': $('elozo').innerHTML = ''; $('szoveg').style.display = 'none'; break;
-		case 'c': $('szoveg').style.display = 'none'; $('baloldal').style.maxWidth = 'none'; $('k').style.width = '740px'; break;
-		default: elozo(el[ei] + nl + hiba);
+		case '':
+			$('elozo').innerHTML = '';
+			break;
+		case 'a':
+			$('elozo').innerHTML = '';
+			$('szoveg').style.display = 'none';
+			break;
+		case 'c':
+			$('szoveg').style.display = 'none';
+			$('baloldal').style.maxWidth = 'none';
+			$('k').style.width = '740px';
+			break;
+		default:
+			elozo(el[ei] + nl + hiba);
 	}
 	$('k').value = '';
 	if (m == 'com') elozo(el[ei]);
@@ -419,8 +428,8 @@ function constant(p) {
 	el[ei] = trim('const ' + p);
 	switch (p) {
 		case 'e': elozo(el[ei] + nl + '2.7182818284 5904523536 0287471352 6624977572'); break;
-		case 'p': elozo(el[ei] + nl + '3.1415926535 8979323846 2643383279 5028841971'); break;
-		case 'f': elozo(el[ei] + nl + '1.6180339887 4989484820 4586834365 6381177203'); break;
+		case 'fi': elozo(el[ei] + nl + '1.6180339887 4989484820 4586834365 6381177203'); break;
+		case 'pi': elozo(el[ei] + nl + '3.1415926535 8979323846 2643383279 5028841971'); break;
 		default: elozo(el[ei] + nl + hiba);
 	}
 }
@@ -503,8 +512,8 @@ function fn(f, s) {
 function google(q, p) {
 	el[ei] = trim('google ' + q + ' ' + p);
 	elozo(el[ei]);
-	if (p == '') window.open('http://www.google.hu/#hl=hu&q=' + q, '_blank');
-	else if (p == 's') window.location.href = 'http://www.google.hu/#hl=hu&q=' + q;
+	if (p == '') window.open('https://www.google.hu/#hl=hu&q=' + q, '_blank');
+	else if (p == 's') window.location.href = 'https://www.google.hu/#hl=hu&q=' + q;
 	else $('elozo').innerHTML += nl + hiba;
 }
 
@@ -526,12 +535,12 @@ function help(p) {
 	var s = 'help ' + p + nl;
 	switch(p) {
 		case 'about':
-			elozo(s + 'ABOUT - Információk' + nl + 
+			elozo(s + 'ABOUT - Információk' + nl +
 			'Honlappal kapcsolatos tudnivalók kiírása.' + nl +
 			'parancs: &nbsp; ABOUT [nincs paramétere]');
 			break;
 		case 'auto':
-			elozo(s + 'AUTO - Gyorsgépelés' + nl + 
+			elozo(s + 'AUTO - Gyorsgépelés' + nl +
 			'Automatikusan kiegészíti a parancsok neveit.' + nl +
 			'parancs: &nbsp; AUTO [on/off]' + nl +
 			'példa: &nbsp; &nbsp; auto on');
@@ -568,7 +577,7 @@ function help(p) {
 			elozo(s + 'CLS - Képernyő törlése' + nl +
 			'Háromféle képpen lehet vele törölni a képernyőt.' + nl +
 			'&nbsp;- &nbsp; csak az előző parancsok törlése' + nl +
-			'&nbsp;a &nbsp; a logó kivételével mindent töröl' + nl + 
+			'&nbsp;a &nbsp; a logó kivételével mindent töröl' + nl +
 			'&nbsp;c &nbsp; oldalsó parancslista törlése' + nl +
 			'parancs: &nbsp; CLS [-/a/c]' + nl +
 			'példa: &nbsp; &nbsp; cls a');
@@ -577,9 +586,9 @@ function help(p) {
 			elozo(s + 'CONST - Konstansok' + nl +
 			'Matematikai állandók értéke.' + nl +
 			'&nbsp;e &nbsp; &nbsp;e' + nl +
-			'&nbsp;fi &nbsp; fi' + nl + 
+			'&nbsp;fi &nbsp; fi' + nl +
 			'&nbsp;pi &nbsp; pi' + nl +
-			'parancs: &nbsp; CONST [e/f/p]' + nl +
+			'parancs: &nbsp; CONST [e/fi/pi]' + nl +
 			'példa: &nbsp; &nbsp; const fi');
 			break;
 		case 'date':
@@ -601,7 +610,7 @@ function help(p) {
 			elozo(s + 'DOMAIN - Gyorsellenőrző' + nl +
 			'Kiírja, hogy az adott domain szabad vagy foglalt.' + nl +
 			'parancs: &nbsp; DOMAIN [webcím]' + nl +
-			'példa: &nbsp; &nbsp; domain tttweb.hu');
+			'példa: &nbsp; &nbsp; domain indikator.hu');
 			break;
 		case 'exit':
 			elozo(s + 'EXIT - Kilépés' + nl +
@@ -745,7 +754,7 @@ function help(p) {
 			elozo(s + 'RESET - Újraindítás' + nl +
 			'Statisztika és előzmények törlése.' + nl +
 			'Paraméterei:' + nl +
-			'&nbsp;- &nbsp; minden adat törlése' + nl + 
+			'&nbsp;- &nbsp; minden adat törlése' + nl +
 			'&nbsp;h &nbsp; előzmények törlése' + nl +
 			'&nbsp;s &nbsp; statisztika törlése' + nl +
 			'parancs: &nbsp; RESET [-/h/s]' + nl +
@@ -847,12 +856,11 @@ function mouse(p) {
 function pages() {
 	el[ei] = 'pages';
 	elozo(el[ei] + nl +
+		'www.indikator.hu &nbsp; &nbsp; &nbsp;INDIKÁTOR | kreatív honlapkészítés' + nl +
+		'www.szabogergo.hu &nbsp; &nbsp; Szabó Gergő fotóoldala' + nl +
 		'www.tttweb.hu &nbsp; &nbsp; &nbsp; Titkos Tudás Tárháza' + nl +
 		'www.rejtjelezo.hu &nbsp; &nbsp; Rejtjelező' + nl +
-		'www.szabogergo.hu &nbsp; &nbsp; Szabó Gergő fotóoldala' + nl +
-		'www.hiperkapu.hu &nbsp; &nbsp; Hiperkapu :: Sci-Fi űrhajók' + nl +
-		'www.indikator.hu &nbsp; &nbsp; &nbsp;INDIKÁTOR | kreatív honlapkészítés' + nl +
-		'www.memlex.hu &nbsp; &nbsp; &nbsp; Memória Lexikon'
+		'www.hiperkapu.hu &nbsp; &nbsp; Hiperkapu :: Sci-Fi űrhajók'
 	);
 }
 
@@ -923,12 +931,12 @@ function ref(q, p) {
 		elozo(el[ei] + nl + hiba);
 		return;
 	}
-	if (q == 'h4') window.open('http://www.w3schools.com/tags/default.asp', hely);
-	else if (q == 'h5') window.open('http://www.w3schools.com/html5/html5_reference.asp', hely);
-	else if (q == 'c') window.open('http://www.w3schools.com/cssref/default.asp', hely);
-	else if (q == 'j') window.open('http://www.w3schools.com/jsref/default.asp', hely);
-	else if (q == 'q') window.open('http://www.w3schools.com/jquery/jquery_ref_selectors.asp', hely);
-	else if (q == 's') window.open('http://www.w3schools.com/sql/sql_quickref.asp', hely);
+	if (q == 'h4') window.open('https://www.w3schools.com/tags/default.asp', hely);
+	else if (q == 'h5') window.open('https://www.w3schools.com/html5/html5_reference.asp', hely);
+	else if (q == 'c') window.open('https://www.w3schools.com/cssref/default.asp', hely);
+	else if (q == 'j') window.open('https://www.w3schools.com/jsref/default.asp', hely);
+	else if (q == 'q') window.open('https://www.w3schools.com/jquery/jquery_ref_selectors.asp', hely);
+	else if (q == 's') window.open('https://www.w3schools.com/sql/sql_quickref.asp', hely);
 	elozo(el[ei]);
 }
 
